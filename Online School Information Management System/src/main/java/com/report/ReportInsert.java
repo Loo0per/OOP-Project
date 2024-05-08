@@ -1,12 +1,12 @@
 package com.report;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 
 
@@ -31,11 +31,18 @@ public class ReportInsert extends HttpServlet {
         isTrue = ReportInsertutil.insertreport(id, name, attendance, marks, grade);
         if(isTrue == true) {
         	
-			RequestDispatcher dis = request.getRequestDispatcher("success.jsp");
-			dis.forward(request, response);
+        	PrintWriter out = response.getWriter(); 
+        	out.println("<script type=\"text/javascript\">"); 
+        	out.println("alert('Success! "+name+"s grade has been generated and recorded');"); 
+        	out.println("location='Reportin.jsp';"); 
+        	out.println("</script>");
+        	
 		} else {
-			RequestDispatcher dis2 = request.getRequestDispatcher("unsuccess.jsp");
-			dis2.forward(request, response);
+			PrintWriter out = response.getWriter(); 
+        	out.println("<script type=\"text/javascript\">"); 
+        	out.println("alert('Submission failed');"); 
+        	out.println("location='Reportin.jsp';"); 
+        	out.println("</script>");
 		}
 		
 		

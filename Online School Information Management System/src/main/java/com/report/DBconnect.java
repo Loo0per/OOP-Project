@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class DBconnect {
 	private static String url = "jdbc:mysql://localhost:3306/osims";
 	private static String userName = "root";
-	private static String password = "root123";
+	private static String password = "Root12345";
 	private static Connection con;
 
 	public static Connection getConnection() {
@@ -19,7 +19,7 @@ public class DBconnect {
 			
 		}
 		catch (Exception e) {
-			System.out.println("Database connection is not success!!!");
+			System.out.println("Database connection is fail");
 		}
 		
 		return con;
