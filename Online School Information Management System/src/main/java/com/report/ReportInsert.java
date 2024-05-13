@@ -28,13 +28,13 @@ public class ReportInsert extends HttpServlet {
       
         boolean isTrue;
         
-        isTrue = ReportInsertutil.insertreport(id, name, attendance, marks, grade);
+        isTrue = ReportDBUtil.insertreport(id, name, attendance, marks, grade);
         if(isTrue == true) {
         	
         	PrintWriter out = response.getWriter(); 
         	out.println("<script type=\"text/javascript\">"); 
         	out.println("alert('Success! "+name+"s grade has been generated and recorded');"); 
-        	out.println("location='Reportin.jsp';"); 
+        	out.println("location='searchstudent.jsp';"); 
         	out.println("</script>");
         	
 		} else {

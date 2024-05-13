@@ -15,6 +15,31 @@
 		<servlet-name>ReportInsert</servlet-name>
 		<url-pattern>/ReportInsert</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>reportDisplay</servlet-name>
+		<servlet-class>com.report.SearchStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchStudentServlet</servlet-name>
+		<url-pattern>/SearchStudentServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>reportUpdate</servlet-name>
+		<servlet-class>com.report.UpdateStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateStudentServlet</servlet-name>
+		<url-pattern>/UpdateStudentServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>reportDelete</servlet-name>
+		<servlet-class>com.report.DeleteStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteStudentServlet</servlet-name>
+		<url-pattern>/DeleteStudentServlet</url-pattern>
+	</servlet-mapping>
+	
 	
 	
 </web-app>	
