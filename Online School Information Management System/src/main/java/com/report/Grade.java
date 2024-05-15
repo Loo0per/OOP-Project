@@ -2,13 +2,13 @@ package com.report;
 
 public class Grade {
 	public static String calculateGrade(double totalPercentage) {
-        if (totalPercentage >= 90) {
+        if (totalPercentage >= 80) {
             return "A";
-        } else if (totalPercentage >= 80) {
+        } else if (totalPercentage >= 65) {
             return "B";
-        } else if (totalPercentage >= 70) {
+        } else if (totalPercentage >= 55) {
             return "C";
-        } else if (totalPercentage >= 60) {
+        } else if (totalPercentage >= 40) {
             return "D";
         } else {
             return "F";

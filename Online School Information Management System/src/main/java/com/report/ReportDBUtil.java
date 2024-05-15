@@ -1,10 +1,6 @@
 package com.report;
 
-import java.util.ArrayList;
-import java.util.List;
 
-import com.report.StudentResult;
-import com.report.DBconnect;
 import java.sql.*;
 
 

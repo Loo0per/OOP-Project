@@ -30,7 +30,7 @@ public class UpdateStudentServlet extends HttpServlet {
         // Update the student details in the database
         boolean updated = ReportDBUtil.updateStudent(student);
 
-        // Set the response content type
+        
         response.setContentType("text/html");
 
 
