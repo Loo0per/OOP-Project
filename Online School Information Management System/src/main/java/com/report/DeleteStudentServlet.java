@@ -21,10 +21,8 @@ public class DeleteStudentServlet extends HttpServlet {
         // Delete the student from the database
         boolean deleted = ReportDBUtil.deleteStudent(studentId);
 
-        // Set the response content type
         response.setContentType("text/html");
 
-        // Get the PrintWriter object to write the response
         PrintWriter out = response.getWriter();
 
         // Write the response

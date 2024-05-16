@@ -16,9 +16,6 @@ public class ReportDBUtil {
 	    	
 	    	boolean isSuccess = false;
 	    	
-	    	//DB connection
-
-	    	
 	    	try {
 	    		con = DBconnect.getConnection();
 	    		stmt = con.createStatement();
